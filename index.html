@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Shortly URL shortening API Challenge from Frontend Mentor. Completed by Ivan Kirshak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="head">
+    <nav class="navigation">
+      <div class="container">
+        <div class="navigation__inner">
+          <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+
+          <div class="navigation__inner-container">
+            <div class="navigation__inner-left">
+              <a href="#" class="navigation__inner-left__link">Features</a>
+              <a href="#" class="navigation__inner-left__link">Pricing</a>
+              <a href="#" class="navigation__inner-left__link">Resources</a>
+            </div>
+
+            <div class="navigation__inner-right">
+              <button type="button" class="login">Login</button>
+              <button type="button" class="signup">Sign up</button>
+            </div>
+          </div>
+          <button type="button" class="mobile-menu-btn" id="menuBtn"></button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <div class="container">
+        <div class="banner__container">
+          <h1 class="banner__container-heading">More than just shorter links</h1>
+          <p class="banner__container-text">Build your brand’s recognition and get detailed insights on how your links
+            are performing.
+          </p>
+          <button type="button" class="banner__container-btn">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="advanced">
+    <div class="container">
+      <form class="advanced__form">
+        <input type="text" class="text-input" name="url" id="urlInput" placeholder="Shorten a link here...">
+        <button type="submit" class="advanced__btn">Shorten it!</button>
+      </form>
+
+      <div class="advanced__content">
+        <h1 class="advanced__content-heading">Advanced Statistics</h1>
+        <p class="advanced__content-text">Track how your links are performing across the web with
+          our advanced statistics dashboard. </p>
+
+        <div class="advanced__content-cards">
+          <div class="advanced__content-card">
+            <img class="advanced__content-icon" src="images/icon-brand-recognition.svg">
+            <h3 class="advanced__content-card__heading">Brand Recognition</h3>
+            <p class="advanced__content-card__text">Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your content. </p>
+          </div>
+          <div class="advanced__content-card">
+            <img class="advanced__content-icon" src="images/icon-detailed-records.svg">
+            <h3 class="advanced__content-card__heading">Detailed Records</h3>
+            <p class="advanced__content-card__text">Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better decisions. </p>
+          </div>
+          <div class="advanced__content-card">
+            <img class="advanced__content-icon" src="images/icon-fully-customizable.svg">
+            <h3 class="advanced__content-card__heading">Fully Customizable</h3>
+            <p class="advanced__content-card__text">Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="boost-links">
+    <h2 class="boost-links__heading">Boost your links today</h2>
+    <button type="button" class="boost-links__btn">Get Started</button>
+  </div>
+
+  <footer class="foot">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__inner-item">
+          <img class="footer__logo" src="images/logo.svg" alt="logo">
+        </div>
+        <div class="footer__inner-item">
+          <ul>
+            <li>Features</li>
+            <li><a href="#">Link Shortening</a></li>
+            <li><a href="#">Branded Links</a></li>
+            <li><a href="#">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="footer__inner-item">
+          <ul>
+            <li>Resources</li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Developers</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer__inner-item">
+          <ul>
+            <li>Company</li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Carreers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__inner-item">
+          <a href="#"><img src="images/icon-facebook.svg" alt="facebook"></a>
+          <a href="#"><img src="images/icon-twitter.svg" alt="twitter"></a>
+          <a href="#"><img src="images/icon-pinterest.svg" alt="pinterest"></a>
+          <a href="#"><img src="images/icon-instagram.svg" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/ivan-kirshak">Ivan Kirshak</a>.
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

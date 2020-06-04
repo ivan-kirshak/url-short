@@ -1,0 +1,244 @@
+$cyan: hsl(180, 66%, 49%);
+$dark-violet: hsl(257, 27%, 26%);
+$red: hsl(0, 87%, 67%);
+$gray: hsl(0, 0%, 75%);
+$grayish-violet: hsl(257, 7%, 63%);
+$very-dark-blue: hsl(255, 11%, 22%);
+$very-dark-violet: hsl(260, 8%, 14%);
+$white: #fff;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: $gray;
+
+  &:hover {
+    color: $very-dark-violet;
+    cursor: pointer;
+  }
+}
+button[type="button"],
+button[type="submit"] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.mobile-menu-btn {
+  display: none;
+}
+
+// NAVIGATION
+.navigation__inner {
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+
+  .navigation__inner-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.5rem;
+  }
+}
+.navigation__inner-left__link {
+  padding-right: 2rem;
+}
+.logo {
+  font-size: 2rem;
+  color: $very-dark-violet;
+  font-weight: 700;
+}
+.login {
+  color: $gray;
+  background: transparent;
+  margin-right: 1rem;
+}
+.signup {
+  color: $white;
+  padding: 8px 25px;
+  background-color: $cyan;
+  border-radius: 25px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// HEADER BANNER
+.banner__container {
+  background-image: url("../images/illustration-working.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 2.5rem 0;
+}
+.banner__container-heading {
+  font-size: 4rem;
+  width: 40%;
+}
+.banner__container-text {
+  color: $gray;
+  width: 30%;
+  font-size: 1rem;
+}
+.banner__container-btn {
+  @extend .signup;
+}
+.banner__container-heading,
+.banner__container-text,
+.banner__container-btn {
+  margin-bottom: 2.5rem;
+}
+
+// ADVANCED
+.advanced {
+  background: linear-gradient(to bottom, #fff 7.5%,hsla(258, 7%, 63%, 0.13) 7.5%,hsla(258, 7%, 63%, 0.13) 100%);
+  margin-top: 3rem;
+  padding-bottom: 8rem;
+
+  .advanced__form {
+    width: 80%;
+    margin: 0 auto;
+    background: $dark-violet url("../images/bg-boost-desktop.svg");
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 7.5rem;
+
+    .text-input {
+      font-family: "Poppins", sans-serif;
+      padding: 1rem;
+      border-radius: 15px;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      width: 85%;
+    }
+    .advanced__btn {
+      @extend .signup;
+      border-radius: 15px;
+      padding: 1rem;
+      margin-left: 1.5rem;
+    }
+  }
+
+  .advanced__content {
+    text-align: center;
+
+    .advanced__content-text {
+      color: $gray;
+      width: 30%;
+      margin: 0 auto;
+      margin-top: 4rem;
+    }
+  }
+  .advanced__content-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5.5rem;
+    height: 30rem;
+  }
+  .advanced__content-card {
+    background: linear-gradient(to bottom, transparent 25%,#fff 25%,#fff 100%);
+    text-align: left;
+    padding: 2rem;
+    margin: 0 2rem;
+    border-radius: 15px;
+
+    .advanced__content-icon {
+      background-color: $dark-violet;
+      border-radius: 50%;
+      padding: 1.75rem;
+    }
+    .advanced__content-card__heading {
+      font-weight: 700;
+    }
+    .advanced__content-card__text {
+      color: $gray;
+      margin-top: 2rem;
+    }
+  }
+  .advanced__content-card:first-child {
+    align-self: start;
+  }
+  .advanced__content-card:last-child {
+    align-self: end;
+  }
+}
+
+// BOOST LINKS
+.boost-links {
+  text-align: center;
+  padding: 2rem 1rem 3rem 1rem;
+  background: $dark-violet url("../images/bg-boost-desktop.svg");
+
+  .boost-links__heading {
+    color: $white;
+    font-size: 2rem;
+  }
+  .boost-links__btn {
+    @extend .signup;
+    margin-top: 2rem;
+  }
+}
+
+// FOOTER
+.foot {
+  background-color: $very-dark-violet;
+  padding: 4rem 1rem;
+  color: $white;
+
+  .footer__logo {
+    // fill: $white;
+    filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(5);
+  }
+
+  .footer__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer__inner-item:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+
+    ul li:first-child {
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  }
+  .footer__inner-item:last-child {
+    a {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+// ATTRIBUTION (UNDER FOOTER)
+.attribution { 
+  text-align: center;
+
+  a:hover {
+    color: $dark-violet;
+  }
+}
+
+@media (max-width: 376px) {
+}
