@@ -1,7 +1,8 @@
 const menuBtn = document.getElementById("menuBtn");
 const navigation = document.querySelector(".navigation__inner-container");
 const formAdvanced = document.getElementById("formAdvanced");
-
+const urlInput = document.getElementById("urlInput");
+const error = document.getElementById("error");
 
 function mobileMenu() {
     menuBtn.classList.toggle("change");
@@ -21,7 +22,18 @@ formAdvanced.onsubmit = function (event) {
     // console.log(formData);
 
     const link = formData.get("link");
-    addLink(link);
+
+    if(link === "") {
+        urlInput.style.border = "2px solid hsl(0, 87%, 67%)";
+        urlInput.style.color = "red";
+        error.innerHTML = "Please add a link";
+    } else {
+        addLink(link);
+        urlInput.style.border = "1px solid black";
+        urlInput.style.color = "gray";
+        error.innerHTML = "";
+    }
+    
 
     formAdvanced.reset()
 }

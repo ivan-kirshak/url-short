@@ -44,6 +44,9 @@ li {
 .mobile-menu-btn {
   display: none;
 }
+.error {
+  color: rgb(255, 0, 0);
+}
 
 // NAVIGATION
 .navigation__inner {
@@ -125,7 +128,6 @@ li {
     background: $dark-violet url("../images/bg-shorten-desktop.svg");
     padding: 3rem;
     border-radius: 15px;
-    margin-bottom: 7.5rem;
 
     .text-input {
       font-family: "Poppins", sans-serif;
@@ -163,6 +165,7 @@ li {
 
   .advanced__content {
     text-align: center;
+    margin-top: 7.5rem;
 
     .advanced__content-text {
       color: $gray;
