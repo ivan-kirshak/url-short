@@ -144,6 +144,23 @@ li {
     }
   }
 
+  .list__inner {
+    background-color: $white;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .short-link {
+    color: cyan;
+  }
+  .copy-button {
+    @extend .signup;
+  }
+
   .advanced__content {
     text-align: center;
 
@@ -374,6 +391,24 @@ li {
   .banner__container-text {
     padding: 1.5rem 0;
   }
+
+  .list__inner {
+    flex-direction: column;
+  }
+  .prev-link {
+    border-bottom: 1px solid $gray;
+  }
+  .short-link {
+    color: cyan;
+    border-top: 1px solid $gray;
+  }
+  .prev-link,
+  .short-link,
+  .copy-button {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
   .advanced {
     .advanced__form {
       width: 100%;

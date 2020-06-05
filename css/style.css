@@ -84,14 +84,14 @@ li {
   margin-right: 1rem;
 }
 
-.signup, .banner__container-btn, .advanced .advanced__form .advanced__btn, .boost-links .boost-links__btn {
+.signup, .banner__container-btn, .advanced .advanced__form .advanced__btn, .advanced .copy-button, .boost-links .boost-links__btn {
   color: #fff;
   padding: 8px 25px;
   background-color: #2acfcf;
   border-radius: 25px;
 }
 
-.signup:hover, .banner__container-btn:hover, .advanced .advanced__form .advanced__btn:hover, .boost-links .boost-links__btn:hover {
+.signup:hover, .banner__container-btn:hover, .advanced .advanced__form .advanced__btn:hover, .advanced .copy-button:hover, .boost-links .boost-links__btn:hover {
   background-color: #38fafa;
 }
 
@@ -149,6 +149,27 @@ li {
   border-radius: 15px;
   padding: 1rem;
   margin-left: 1.5rem;
+}
+
+.advanced .list__inner {
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.advanced .short-link {
+  color: cyan;
 }
 
 .advanced .advanced__content {
@@ -411,6 +432,25 @@ li {
   }
   .banner__container-text {
     padding: 1.5rem 0;
+  }
+  .list__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .prev-link {
+    border-bottom: 1px solid #bfbfbf;
+  }
+  .short-link {
+    color: cyan;
+    border-top: 1px solid #bfbfbf;
+  }
+  .prev-link,
+  .short-link,
+  .copy-button {
+    width: 100%;
+    padding: 0.5rem;
   }
   .advanced .advanced__form {
     width: 100%;
