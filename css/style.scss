@@ -46,6 +46,7 @@ li {
 }
 .error {
   color: rgb(255, 0, 0);
+  align-self: flex-start;
 }
 
 // NAVIGATION
@@ -153,7 +154,13 @@ li {
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
+    .input-and-error {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+    }
     .text-input {
       font-family: "Poppins", sans-serif;
       padding: 1rem;
@@ -161,7 +168,7 @@ li {
       font-size: 1rem;
       border: none;
       outline: none;
-      width: 85%;
+      width: 100%;
     }
     .advanced__btn {
       @extend .signup;
