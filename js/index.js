@@ -28,12 +28,13 @@ formAdvanced.onsubmit = function (event) {
         urlInput.style.color = "red";
         error.innerHTML = "Please add a link";
     } else {
-        addLink(link);
-        // processLink(link);
-        shortenUrl(link);
         urlInput.style.border = "1px solid black";
         urlInput.style.color = "gray";
         error.innerHTML = "";
+        // processLink(link);
+        shortenUrl(link);
+
+        // addLink(link);
     }
 
 
@@ -63,7 +64,7 @@ function copyLink(event) {
 
 // }
 
-let shortLink; 
+let shortLink;
 //  reminded about passed tutorials at codecademy
 // https://www.codecademy.com/courses/introduction-to-javascript/lessons/requests-i/exercises/xhr-post-requests-iii
 function shortenUrl(link) {
@@ -74,39 +75,58 @@ function shortenUrl(link) {
     const data = JSON.stringify({ destination: link });
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.onreadystatechange = (() => {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
 
+                shortLink = xhr.response.shortUrl;
+                addListItem(link, shortLink);
 
-            shortLink = xhr.response.shortUrl;
-            addListItem(link, shortLink);
-
-            // console.log(xhr.response.shortUrl);
+                // console.log(xhr.response.shortUrl);
+            }
         }
-    })
+    }
+
     xhr.open('POST', url);
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.setRequestHeader('apikey', apiKey);
     xhr.send(data);
 }
+// console.log(shortLink)
 
 function addListItem(link, shortLink) {
-    return `<div class="list__inner">
-                <h3 class="prev-link">${link}</h3>
-                <h3 class="short-link">${shortLink}</h3>
-                <button 
-                type="button" 
-                class="copy-button"
-                onclick="copyLink(event)"
-                >Copy</button>
-            </div>`;
-}
 
-function addLink(link) {
     const linksList = document.getElementById("links");
 
     const linkListItem = document.createElement("li");
-    linkListItem.innerHTML = addListItem(link);
+    linkListItem.innerHTML = `<div class="list__inner">
+                                <h3 class="prev-link">${link}</h3>
+                                <h3 class="short-link">${shortLink}</h3>
+                                <button 
+                                type="button" 
+                                class="copy-button"
+                                onclick="copyLink(event)"
+                                >Copy</button>
+                            </div>`;
 
     linksList.prepend(linkListItem);
+
+    // return `<div class="list__inner">
+    //             <h3 class="prev-link">${link}</h3>
+    //             <h3 class="short-link">${shortLink}</h3>
+    //             <button 
+    //             type="button" 
+    //             class="copy-button"
+    //             onclick="copyLink(event)"
+    //             >Copy</button>
+    //         </div>`;
 }
+
+// function addLink(link) {
+//     const linksList = document.getElementById("links");
+
+//     const linkListItem = document.createElement("li");
+//     linkListItem.innerHTML = addListItem(link);
+
+//     linksList.prepend(linkListItem);
+// }

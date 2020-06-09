@@ -1,3 +1,12 @@
+#URL Shortener v0.1
+
+URL Shortener, which used rebrand.ly API to shorten the link
+
+Visual appearance taken from [Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) challenge.
+
+Unfortunately, i currently did not got rel.ink API, so i used rebrand.ly API to shorten the links
+As a hint used a lesson from [codecademy](https://www.codecademy.com/courses/introduction-to-javascript/lessons/requests-i/exercises/xhr-post-requests-iii)
+
 <!-- # Frontend Mentor - Shortly URL shortening API Challenge
 
 ![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)

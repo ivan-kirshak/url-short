@@ -200,8 +200,8 @@ li {
   .advanced__content-card {
     background: linear-gradient(
       to bottom,
-      transparent 25%,
-      #fff 25%,
+      transparent 15%,
+      #fff 15%,
       #fff 100%
     );
     text-align: left;
@@ -209,6 +209,7 @@ li {
     margin: 0 2rem;
     border-radius: 15px;
     width: 25%;
+    position: relative;
 
     .advanced__content-icon {
       background-color: $dark-violet;
@@ -224,10 +225,31 @@ li {
     }
   }
   .advanced__content-card:first-child {
-    align-self: start;
+    align-self: flex-start;
+    &:after {
+      content: "";
+      background-color: $cyan;
+      position: absolute;
+      right: -34%;
+      top: 70%;
+      // transform: translateY(-50%);
+      height: 0.5rem;
+      width: 34%;
+    }
   }
   .advanced__content-card:last-child {
-    align-self: end;
+    align-self: flex-end;
+    &:before {
+      content: "";
+      background-color: $cyan;
+      position: absolute;
+      z-index: -1;
+      left: -33%;
+      top: 50%;
+      // transform: translateY(-50%);
+      height: 0.5rem;
+      width: 33%;
+    }
   }
 }
 
@@ -326,6 +348,24 @@ li {
     .advanced__content-card {
       width: 80%;
     }
+    .advanced__content-card:first-child {
+      &:after {
+        right: 50%;
+        top: 100%;
+        transform: translateY(-50deg);
+        width: 0.5rem;
+        height: 34%;
+      }
+    }
+    .advanced__content-card:last-child {
+      &:before {
+        left: 50%;
+        top: 0;
+        transform: translateY(-50deg);
+        width: 0.5rem;
+        height: 25%;
+      }
+    }
   }
   .links {
     width: 100%;
@@ -345,9 +385,9 @@ li {
     width: 50%;
   }
 
-
   .list__inner {
     flex-direction: column;
+    text-align: center;
   }
   .prev-link {
     border-bottom: 1px solid $gray;
@@ -446,8 +486,6 @@ li {
   .banner__container-text {
     padding: 1.5rem 0;
   }
-
-
 
   .advanced {
     .advanced__form {
